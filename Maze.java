@@ -72,19 +72,7 @@ public class Maze implements Iterable<Cell> {
         Random rand = new Random();
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
-                double randDouble = rand.nextDouble();
-                if(randDouble < densityOfObstacles){
-                    landscape[r][c] = new Cell(r, c, CellType.OBSTACLE);
-                } else if(randDouble < densityOfObstacles + densityOfIce){
-                    landscape[r][c] = new Cell(r, c, CellType.ICE);
-                } else if(randDouble < densityOfObstacles + densityOfIce + densityOfMud){
-                    landscape[r][c] = new Cell(r, c, CellType.MUD);
-                }else{
-                    landscape[r][c] = new Cell(r, c, CellType.FREE);
-                }
-
-
-                // landscape[r][c] = new Cell(r, c, rand.nextDouble() < densityOfObstacles ? CellType.OBSTACLE : CellType.FREE);
+                landscape[r][c] = new Cell(r, c, rand.nextDouble() < densityOfObstacles ? CellType.OBSTACLE : CellType.FREE);
             }
         }
     }
