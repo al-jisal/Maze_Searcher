@@ -2,10 +2,6 @@
 * Date: April 18, 2023
 * File: AbstractMazeSearch.java
 * 
-* CS 231
-* Section B
-* Project 7
-* 
 * this abstract class implements a searching algorithm for searching the Maze
 */
 
@@ -91,13 +87,7 @@ public abstract class AbstractMazeSearch {
 
 
     /*
-     ************************** Extension Alert*************************
-
-     *  This method is edited to implement my extension for ice and mud cell
-     * Turns on the ice cell will slow the speed of the search dramatically, but moving straight across a ice cell will 
-     * speed the cells movement up
-     * 
-     * Furthermore, with the case of a mud cell, both turns and moving straight across them will slow the cells movement.
+     *  
      */
     public LinkedList<Cell> search(Cell start, Cell target, boolean display, int delay) throws InterruptedException{
 
@@ -122,39 +112,21 @@ public abstract class AbstractMazeSearch {
 
                 LinkedList<Cell> path = traceback(this.cur);
                 if(path.getFirst() == null){  
-                //your on the first cell and it's an ice or mud cell  
-                    if(cur.getType() == CellType.ICE){
-                    Thread.sleep(delay /4);
-                    } 
-                    if(nextCell.getType() == CellType.MUD){
-                    Thread.sleep(delay * 6);
+        
+                    Thread.sleep(delay);
                     }
                 }else{
 
                     //your turning 
                     if((cur.getRow() == path.getFirst().getRow()) && nextCell.getRow() != cur.getRow()){
                         if((cur.getCol() == path.getFirst().getCol()) && nextCell.getCol() != cur.getCol()){
-                            //your currently on an ice cell while turning
-                            if(cur.getType() == CellType.ICE){
-                                Thread.sleep(delay * 6);
-                            }
-
-                            //you are currently on mud while turning
-                            if(cur.getType() == CellType.MUD){
-                                Thread.sleep(delay * 5);
-                            }
                             
-
-                        }
-                    }
-                    else if(cur.getType() == CellType.ICE){
-                        Thread.sleep(delay /4);
-                    } 
-                    else if(nextCell.getType() == CellType.MUD){
-                        Thread.sleep(delay * 6);
-                    } else{
-                        Thread.sleep(delay);
-                    }     
+                                Thread.sleep(delay);
+                            }
+                    
+                        } else{
+                            Thread.sleep(delay);
+                        }     
                 }
                 mazeDisplay.repaint();  
             }
