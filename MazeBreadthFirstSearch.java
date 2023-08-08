@@ -2,10 +2,6 @@
 * Date: April 18, 2023
 * File: MazeBreadthFirstSearch.java
 * 
-* CS 231
-* Section B
-* Project 7
-* 
 * this class implements the BreadthFirstSearch algorithm on the Maze
 */
 
