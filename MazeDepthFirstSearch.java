@@ -1,11 +1,7 @@
 /* Name: Desmond Frimpong
 * Date: April 18, 2023
 * File: MazeDepthFirstSearch.java
-* 
-* CS 231
-* Section B
-* Project 7
-* 
+*
 * this class implements the DethFirstSearch algorithm on the Maze
 */
 
