@@ -1,11 +1,6 @@
 /* Name: Desmond Frimpong
  * Date: March 6, 2023
  * File: Queue.java
- 
- * 
- * CS 231
- * Section B
- * Project 4
  * 
  * this class implements the queu structure interface
  */
