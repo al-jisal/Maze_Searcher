@@ -1,9 +1,4 @@
 /*
-  Originally written by Bruce A. Maxwell a long time ago.
-  Updated by Brian Eastwood and Stephanie Taylor more recently
-  Updated by Bruce again in Fall 2018
-  Updated by Bender in Spring 2023
-
   Creates a window using the JFrame class.
 
   Creates a drawable area in the window using the JPanel class.
