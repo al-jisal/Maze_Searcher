@@ -120,12 +120,6 @@ public class Cell {
             case OBSTACLE:
                 draw(g, scale, Color.BLACK);
                 break;
-            case ICE:
-                draw(g, scale, getPrev() != null ? Color.YELLOW : Color.cyan);
-                break;
-            case MUD:
-                draw(g, scale, getPrev() != null ? Color.YELLOW : Color.PINK);
-                break;
         }
     }
 
