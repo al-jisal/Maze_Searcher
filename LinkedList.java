@@ -2,10 +2,6 @@
      * Date: February 27, 2023
      * File: LinkedList.java
      * 
-     * CS 231
-     * Section B
-     * Project 5
-     * 
      * this class implement the LinkedList data structure, implementing 
      * stacksand iterable interface
      */
